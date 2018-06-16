@@ -50,7 +50,11 @@ loadingTask.promise.then(function(pdf) {
       viewport: viewport
     };
    
-    
+    /**
+     * NOTE: Access the text content
+     * https://mozilla.github.io/pdf.js/examples/
+     * https://gist.github.com/Gubolin/11174910
+     */
     page.getTextContent().then(function(textContent){
         debugger
               
@@ -58,6 +62,7 @@ loadingTask.promise.then(function(pdf) {
     });
 
     /*
+    NOTE: Renders to html
     var renderTask = page.render(renderContext);
     renderTask.then(function () {
       console.log('Page rendered');
